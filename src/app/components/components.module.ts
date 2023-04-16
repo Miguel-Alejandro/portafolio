@@ -5,11 +5,13 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { IconClass } from '../classes/icons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
     declarations: [
         SidenavComponent,
-        AboutMeComponent
+        AboutMeComponent,
+        ExperienceComponent
     ],
     imports: [ 
         CommonModule,
@@ -19,6 +21,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
     exports: [
         SidenavComponent,
         AboutMeComponent,
+        ExperienceComponent,
     ],
     providers: [IconClass]
 })
