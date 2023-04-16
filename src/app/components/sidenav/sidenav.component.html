@@ -1,0 +1,32 @@
+<button
+  type="button"
+  cdkOverlayOrigin
+  #oepnSidemenuButton="cdkOverlayOrigin"
+  (click)="openSidemenu()"
+>
+  <fa-icon class="text-white text-2xl" [icon]="icons.menuIcon"></fa-icon>
+</button>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="oepnSidemenuButton"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <div
+    class="sidenav h-screen w-screen fixed top-0 flex flex-col items-center justify-center"
+  >
+    <div class="sidenav__container text-center">
+      <p class="mb-2 text-white">Sobre mi</p>
+      <p class="mb-2 text-white">Experiencia</p>
+      <p class="mb-2 text-white">Conocimientos</p>
+      <p class="mb-2 text-white">Contacto</p>
+      <p class="text-lime-500">
+        <b>Descargar curriculum</b>
+      </p>
+    </div>
+
+    <div class="sidenav__close mt-8" (click)="openSidemenu()">
+      <fa-icon class="text-white text-2xl" [icon]="icons.closeIcon"></fa-icon>
+    </div>
+  </div>
+</ng-template>
