@@ -9,7 +9,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     imports: [ 
         CommonModule,
         HomeRoutingModule,
-        ComponentsModule
+        ComponentsModule,
     ],
     exports: [],
     providers: [],
