@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IconClass } from 'src/app/classes/icons/icons';
 
 @Component({
@@ -9,8 +9,15 @@ import { IconClass } from 'src/app/classes/icons/icons';
 export class SidenavComponent {
   public isOpen: boolean = false;
 
+  @Output() sidenavOptionsState: EventEmitter<string> = new EventEmitter<string>();
+
   constructor(public icons: IconClass) {
 
+  }
+
+  public changeSidenavStatus(optionType: string): void {
+    this.sidenavOptionsState.emit(optionType);
+    this.openSidemenu()
   }
 
   public openSidemenu(): void {
