@@ -4,10 +4,12 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { IconClass } from '../classes/icons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
     declarations: [
-        SidenavComponent
+        SidenavComponent,
+        AboutMeComponent
     ],
     imports: [ 
         CommonModule,
@@ -15,7 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         FontAwesomeModule
     ],
     exports: [
-        SidenavComponent
+        SidenavComponent,
+        AboutMeComponent,
     ],
     providers: [IconClass]
 })
