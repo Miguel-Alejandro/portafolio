@@ -1,12 +1,12 @@
 <div class="home flex md:justify-between md:items-center">
   <div class="home__info items-center md:mt-20 lg:flex">
     <div class="home__info_menu-icon pl-6 mt-4 mb-8 md:hidden">
-      <app-sidenav></app-sidenav>
+      <app-sidenav (sidenavOptionsState)="sidenavState($event)"></app-sidenav>
     </div>
 
     <div class="home__info__picture lg:pl-16">
       <img
-        class="hidden xl:w-52 lg:w-52 md:w-40 lg:block"
+        class="hidden mb-12 xl:w-52 lg:w-52 md:w-40 lg:block"
         src="/assets/img/miguel-alejandro.jpeg"
         alt="miguel alejandro"
       />
@@ -17,22 +17,46 @@
         Miguel <br />
         Alejandro
       </h1>
-      <p class="text-slate-400 mt-8">Front-end developer</p>
+      <p class="text-slate-400 mt-8 mb-8">Front-end developer</p>
     </div>
   </div>
 
   <div class="home_menu hidden md:block md:pr-16">
-    <p class="mb-2 text-white cursor-pointer hover:text-cyan-500">Sobre mi</p>
-    <p class="mb-2 text-white cursor-pointer hover:text-cyan-500">
+    <p 
+    [ngClass]="{'text-cyan-500': menuState == 'about'}"
+    class="mb-2 text-white cursor-pointer hover:text-cyan-500" (click)="changeHomeSection('about')">Sobre mi</p>
+    <p 
+    [ngClass]="{'text-cyan-500': menuState == 'experience'}"
+    class="mb-2 text-white cursor-pointer hover:text-cyan-500" (click)="changeHomeSection('experience')">
       Experiencia
     </p>
-    <p class="mb-2 text-white cursor-pointer hover:text-cyan-500">
+    <p
+     [ngClass]="{'text-cyan-500': menuState == 'skills'}"
+     class="mb-2 text-white cursor-pointer hover:text-cyan-500" (click)="changeHomeSection('skills')">
       Conocimientos
     </p>
-    <p class="mb-2 text-white cursor-pointer hover:text-cyan-500">Contacto</p>
+    <p 
+    [ngClass]="{'text-cyan-500': menuState == 'contact'}"
+    class="mb-2 text-white cursor-pointer hover:text-cyan-500" (click)="changeHomeSection('contact')">Contacto</p>
     <p class="text-white cursor-pointer hover:text-lime-500">
       <b>Descargar curriculum</b>
     </p>
+  </div>
+</div>
+
+
+<div class="my-info" [ngSwitch]="menuState">
+  <div class="my-info__about-me" *ngSwitchCase=" 'about' ">
+    <app-about-me></app-about-me>
+  </div>
+  <div class="my-info__about-me" *ngSwitchCase=" 'experience' ">
+    <p>experiencia</p>
+  </div>
+  <div class="my-info__about-me" *ngSwitchCase=" 'skills' ">
+    <p>skills</p>
+  </div>
+  <div class="my-info__about-me" *ngSwitchCase=" 'contact' ">
+    <p>contacto</p>
   </div>
 </div>
 

@@ -8,6 +8,7 @@
 </button>
 
 <ng-template
+  
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="oepnSidemenuButton"
   [cdkConnectedOverlayOpen]="isOpen"
@@ -16,10 +17,10 @@
     class="sidenav h-screen w-screen fixed top-0 flex flex-col items-center justify-center"
   >
     <div class="sidenav__container text-center">
-      <p class="mb-2 text-white">Sobre mi</p>
-      <p class="mb-2 text-white">Experiencia</p>
-      <p class="mb-2 text-white">Conocimientos</p>
-      <p class="mb-2 text-white">Contacto</p>
+      <p class="mb-2 text-white" (click)="changeSidenavStatus('about')">Sobre mi</p>
+      <p class="mb-2 text-white" (click)="changeSidenavStatus('experience')">Experiencia</p>
+      <p class="mb-2 text-white" (click)="changeSidenavStatus('skills')">Conocimientos</p>
+      <p class="mb-2 text-white" (click)="changeSidenavStatus('contact')">Contacto</p>
       <p class="text-lime-500">
         <b>Descargar curriculum</b>
       </p>
