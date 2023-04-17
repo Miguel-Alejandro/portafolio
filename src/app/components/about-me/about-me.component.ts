@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconClass } from 'src/app/classes/icons/icons';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+
+  constructor(public icons: IconClass){}
 
 }

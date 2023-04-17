@@ -1,46 +1,72 @@
-<div class="about w-screen sm:h-screen pl-6 pr-6">
+<div class="about w-screen pl-6 pr-6 pb-8 text-white lg:pl-16 lg:pr-16">
     <div class="about__title pt-8">
         <h1 class="text-4xl">Sobre mi</h1>
     </div>
 
-    <div class="about__description mt-8">
+    <div class="about__container lg:flex lg:justify-between lg:items-center">
+        <div class="about__description mt-8 lg:w-2/4">
 
-        <div class="about__description__info">
-            <div class="about__description__info__name mb-4">
-                <p class="font-black">Nombres:</p>
-                <p>Miguel Alejandro</p>
+            <div class="about__description__info">
+                <div class="about__description__info__name mb-4">
+                    <p class="font-black">Nombres:</p>
+                    <p>Miguel Alejandro</p>
+                </div>
+                
+                <div class="about__description__info__lastname mb-4">
+                    <p class="font-black">Apellidos:</p>
+                    <p>Arellano Lucio</p>
+                </div>
+                
+                <div class="about__description__info__age">
+                    <p class="font-black">Edad:</p>
+                    <p>23 años</p>
+                </div>
             </div>
-            
-            <div class="about__description__info__lastname mb-4">
-                <p class="font-black">Apellidos:</p>
-                <p>Arellano Lucio</p>
+
+            <div class="about__more mt-8">
+                <p>
+                    Tengo 2 años y 8 meses de experiencia en el desarrollo web, estudie la prepa en el conalep
+                    004, estudié un año la carrera de Tics en el Instituto Tecnológico de Gustavo A. Madero 
+                    pero dejé la carrera porque no me gustaba como enseñaban. <br> <br>
+                </p>
+        
+                <p>
+                    Soy completamente autodidacta, me gusta mucho aprender y aprender de mi equipo de
+                    trabajo, lo que no se lo investigo, lo estudió y lo aplico. <br> <br>
+                </p>
+        
+                <p>
+                    Actualmente me encuentro aprendiendo golang para desarrollo backend ya que siempre me
+                    he preguntado cómo es que se desarrollan los servidores, los patrones de diseño que se
+                    utilizan, como es que se hace el despliegue a aws, gcp etc. Mi meta a corto plazo es
+                    mejorar mis habilidades como Frontend y ser un Fullstack jr developer. <br><br>
+                </p>
             </div>
-            
-            <div class="about__description__info__age">
-                <p class="font-black">Edad:</p>
-                <p>23 años</p>
-            </div>
+    
         </div>
 
-    </div>
+        <div class="about__contact-info mt-12 pb-12 relative lg:w-2/4 lg:flex lg:justify-center lg:items-center">
+            <div class="about__contact-info__circle bg-yellow-700 w-52 h-52"></div>
+            
+            <div class="about__contact-info__contact flex flex-col justify-center items-center absolute rounded-md top-6">
+                <div class="about__contact-info__contact-social">
+                    <a href="https://github.com/Miguel-Alejandro" target="_blank">
+                        <fa-icon class="text-white text-3xl cursor-pointer" [icon]="icons.githubIcon"></fa-icon>
+                    </a>
 
-    <div class="about__more mt-8">
-        <p>
-            Tengo 2 años y 8 meses de experiencia en el desarrollo web, estudie la prepa en el conalep
-            004, estudié un año la carrera de Tics en el Instituto Tecnológico de Gustavo A. Madero 
-            pero dejé la carrera porque no me gustaba como enseñaban. <br> <br>
-        </p>
+                    <a href="https://www.linkedin.com/in/miguel-alejandro-arellano-lucio-78a80b1a7/" target="_blank">
+                        <fa-icon class="text-white text-3xl ml-2 cursor-pointer" [icon]="icons.linkedinIcon"></fa-icon>
+                    </a>
+                </div>
 
-        <p>
-            Soy completamente autodidacta, me gusta mucho aprender y aprender de mi equipo de
-            trabajo, lo que no se lo investigo, lo estudió y lo aplico. <br> <br>
-        </p>
-
-        <p>
-            Actualmente me encuentro aprendiendo golang para desarrollo backend ya que siempre me
-            he preguntado cómo es que se desarrollan los servidores, los patrones de diseño que se
-            utilizan, como es que se hace el despliegue a aws, gcp etc. Mi meta a corto plazo es
-            mejorar mis habilidades como Frontend y ser un Fullstack jr developer. <br><br>
-        </p>
+                <div class="about__contact-info__contact-email mt-3">
+                    <p class="lg:flex lg:items-center">
+                        <fa-icon class="lg:text-xl lg:mr-2 lg:text-white lg:block hidden" [icon]="icons.emailIcon"></fa-icon>
+                        arellano.ecotecnologias@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    
     </div>
 </div>
