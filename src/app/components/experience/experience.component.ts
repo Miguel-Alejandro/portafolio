@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JobExperience } from 'src/app/interfaces/job.interface';
 
 @Component({
   selector: 'app-experience',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
-
-  public works = [
+  public folderInfo: JobExperience;
+  public works: Array<JobExperience> = [
     {
       name: 'Digital Class',
       duration: '2020 - 2021',
@@ -36,7 +37,13 @@ export class ExperienceComponent {
         }
       ]
 
-    }
+    },
+    
+    
   ];
+
+  public folderJobInfo($event: JobExperience): void {
+    this.folderInfo = $event
+  }
 
 }

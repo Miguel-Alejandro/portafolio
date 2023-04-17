@@ -6,12 +6,16 @@ import { IconClass } from '../classes/icons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { FoldersComponent } from './folders/folders.component';
+import { FoldersDetailComponent } from './folders-detail/folders-detail.component';
 
 @NgModule({
     declarations: [
         SidenavComponent,
         AboutMeComponent,
-        ExperienceComponent
+        ExperienceComponent,
+        FoldersComponent,
+        FoldersDetailComponent
     ],
     imports: [ 
         CommonModule,
@@ -22,6 +26,8 @@ import { ExperienceComponent } from './experience/experience.component';
         SidenavComponent,
         AboutMeComponent,
         ExperienceComponent,
+        FoldersComponent,
+        FoldersDetailComponent
     ],
     providers: [IconClass]
 })
