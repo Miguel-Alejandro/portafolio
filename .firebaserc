@@ -1,0 +1,17 @@
+{
+  "targets": {
+    "portafolio-88eed": {
+      "hosting": {
+        "dev": [
+          "dev-miguel-alejandro"
+        ],
+        "prod": [
+          "miguel-alejandro"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portafolio-88eed"
+  }
+}

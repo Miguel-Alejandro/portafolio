@@ -1,0 +1,16 @@
+
+<div class="exp w-screen h-screen pl-6 pr-6 pt-4 pb-16 overflow-auto lg:pl-16 lg:pr-16">
+  <h1 class="text-4xl text-white mb-8">Experiencia</h1>
+  
+  <div class="exp__container md:flex md:justify-between">
+    
+    <div class="md:w-2/4">
+      <app-folders [data]="works" (folderDataSelected)="folderJobInfo($event)"></app-folders>
+    </div>
+
+    <div class="exp__container__stains md:w-2/4 p-4">
+      <app-folders-detail [folderInfo]="folderInfo"></app-folders-detail>
+    </div>
+  </div>
+
+</div>
