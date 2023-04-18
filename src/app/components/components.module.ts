@@ -11,6 +11,7 @@ import { FoldersDetailComponent } from './folders-detail/folders-detail.componen
 import { SkillsComponent } from './skills/skills.component';
 import { SkillCardComponent } from './skill-card/skill-card.component';
 import { ExperienceBarComponent } from './experience-bar/experience-bar.component';
+import { BuildingPageComponent } from './building-page/building-page.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ExperienceBarComponent } from './experience-bar/experience-bar.componen
         FoldersDetailComponent,
         SkillsComponent,
         SkillCardComponent,
-        ExperienceBarComponent
+        ExperienceBarComponent,
+        BuildingPageComponent
     ],
     imports: [ 
         CommonModule,
@@ -36,7 +38,8 @@ import { ExperienceBarComponent } from './experience-bar/experience-bar.componen
         FoldersDetailComponent,
         SkillsComponent,
         SkillCardComponent,
-        ExperienceBarComponent
+        ExperienceBarComponent,
+        BuildingPageComponent
     ],
     providers: [IconClass]
 })
