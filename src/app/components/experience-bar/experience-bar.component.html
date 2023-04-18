@@ -1,0 +1,14 @@
+<div class="experience-bar flex">
+  <div class="experience-bar__container bg-neutral-300">
+    <div
+      [ngClass]="{
+        'wid-1': experienceRanges == 1,
+        'wid-2': experienceRanges == 2,
+        'wid-3': experienceRanges == 3,
+        'wid-4': experienceRanges == 4,
+        'wid-5': experienceRanges == 5
+      }"
+      class="experience-bar__container__progress bg-gray-800"
+    ></div>
+  </div>
+</div>
