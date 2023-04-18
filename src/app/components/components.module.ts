@@ -8,6 +8,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FoldersComponent } from './folders/folders.component';
 import { FoldersDetailComponent } from './folders-detail/folders-detail.component';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillCardComponent } from './skill-card/skill-card.component';
+import { ExperienceBarComponent } from './experience-bar/experience-bar.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +18,10 @@ import { FoldersDetailComponent } from './folders-detail/folders-detail.componen
         AboutMeComponent,
         ExperienceComponent,
         FoldersComponent,
-        FoldersDetailComponent
+        FoldersDetailComponent,
+        SkillsComponent,
+        SkillCardComponent,
+        ExperienceBarComponent
     ],
     imports: [ 
         CommonModule,
@@ -27,7 +33,10 @@ import { FoldersDetailComponent } from './folders-detail/folders-detail.componen
         AboutMeComponent,
         ExperienceComponent,
         FoldersComponent,
-        FoldersDetailComponent
+        FoldersDetailComponent,
+        SkillsComponent,
+        SkillCardComponent,
+        ExperienceBarComponent
     ],
     providers: [IconClass]
 })
