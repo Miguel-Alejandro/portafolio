@@ -42,7 +42,7 @@
     </p>
     <p
       class="mb-2 text-white cursor-pointer hover:text-cyan-500"
-      (click)="changeHomeSection('contact')"
+      (click)="changeHomeSection('projects')"
     >
       Proyectos
     </p>
@@ -59,7 +59,7 @@
   <div class="my-info__about-me" *ngSwitchCase="'skills'">
     <app-skills></app-skills>
   </div>
-  <div class="my-info__about-me" *ngSwitchCase="'contact'">
-    <p>contacto</p>
+  <div class="my-info__about-me" *ngSwitchCase="'projects'">
+    <app-building-page></app-building-page>
   </div>
 </div>

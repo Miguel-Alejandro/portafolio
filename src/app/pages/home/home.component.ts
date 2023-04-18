@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public menuState: 'about' | 'experience' | 'skills' | 'contact' = 'about';
+  public menuState: 'about' | 'experience' | 'skills' | 'projects' = 'about';
   
   constructor(){}
   
@@ -14,7 +14,7 @@ export class HomeComponent {
     this.menuState = $event;
   }
 
-  public changeHomeSection(optionType: 'about' | 'experience' | 'skills' | 'contact'): void {
+  public changeHomeSection(optionType: 'about' | 'experience' | 'skills' | 'projects'): void {
     this.menuState = optionType;
   }
   
