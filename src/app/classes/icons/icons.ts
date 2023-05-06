@@ -2,6 +2,8 @@ import { faBars, faXmark, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faLinkedin,
+  faMedium,
+  faInstagram,
   faAngular,
   faJira,
   faJs,
@@ -13,8 +15,6 @@ import {
 export class IconClass {
   public menuIcon = faBars;
   public closeIcon = faXmark;
-  public githubIcon = faGithub;
-  public linkedinIcon = faLinkedin;
   public emailIcon = faEnvelope;
   public angularIcon = faAngular;
   public jiraIcon = faJira;
@@ -22,6 +22,11 @@ export class IconClass {
   public cssIcon = faCss3;
   public gitIcon = faGit;
   public goIcon = faGolang;
+
+  public githubIcon = faGithub;
+  public linkedinIcon = faLinkedin;
+  public mediumIcon = faMedium;
+  public instagramIcon = faInstagram;
 
   constructor() {}
 }
