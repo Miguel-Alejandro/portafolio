@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public menuState: 'about' | 'experience' | 'skills' | 'projects' = 'about';
+  public menuState: 'about' | 'experience' | 'skills' | 'projects' = 'experience';
   
   constructor(){}
   
