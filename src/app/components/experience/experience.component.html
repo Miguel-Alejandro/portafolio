@@ -1,16 +1,32 @@
 
-<div class="exp w-screen h-screen pl-6 pr-6 pt-4 pb-16 overflow-auto lg:pl-16 lg:pr-16">
-  <h1 class="text-4xl text-white mb-8">Experiencia</h1>
+<div class="exp w-screen pt-8">
+  <h1 class="text-white text-5xl mt-12 text-center mb-20">Experiencia</h1>
+  <owl-carousel-o [options]="customOptions" #carousel>
+    <ng-container *ngFor="let workItem of works ">
+      <ng-template carouselSlide>
+
+        <div class="container">
+          <div class="card">
+             <div class="card__image-container">
+            </div>
+              <svg class="card__svg" viewBox="0 0 800 500">
+                <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"></path>
+                <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"></path>
+              </svg>
+            
+             <div class="card__content">
+               <p class="card__title"> {{workItem.name}} </p>
+               <span> {{workItem.duration}} </span>
+
+               <ul *ngFor="let functions of workItem.functions">
+                <li class="list-disc"> {{functions.functionName}} </li>
+               </ul>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>  
+    </ng-container>
+  </owl-carousel-o>
   
-  <div class="exp__container md:flex md:justify-between">
-    
-    <div class="md:w-2/4">
-      <app-folders [data]="works" (folderDataSelected)="folderJobInfo($event)"></app-folders>
-    </div>
-
-    <div class="exp__container__stains md:w-2/4 p-4">
-      <app-folders-detail [folderInfo]="folderInfo"></app-folders-detail>
-    </div>
-  </div>
-
 </div>
