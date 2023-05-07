@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { IconClass } from '../classes/icons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+import { IconClass } from '../classes/icons/icons';
+
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FoldersComponent } from './folders/folders.component';
@@ -33,9 +36,12 @@ import { SocialButtonComponent } from './social-button/social-button.component';
     imports: [ 
         CommonModule,
         OverlayModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        CarouselModule
     ],
     exports: [
+        CarouselModule,
+        
         SidenavComponent,
         AboutMeComponent,
         ExperienceComponent,

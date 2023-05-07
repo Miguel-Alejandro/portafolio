@@ -26,8 +26,10 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "animate.css": "^4.1.1",
     "firebase": "^9.19.1",
     "ionicons": "^7.1.0",
+    "ngx-owl-carousel-o": "^15.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
