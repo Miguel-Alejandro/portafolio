@@ -10,7 +10,6 @@ import { IconClass } from '../classes/icons/icons';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FoldersComponent } from './folders/folders.component';
-import { FoldersDetailComponent } from './folders-detail/folders-detail.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceBarComponent } from './experience-bar/experience-bar.component';
 import { BuildingPageComponent } from './building-page/building-page.component';
@@ -23,7 +22,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         AboutMeComponent,
         ExperienceComponent,
         FoldersComponent,
-        FoldersDetailComponent,
         SkillsComponent,
         ExperienceBarComponent,
         BuildingPageComponent,
@@ -44,7 +42,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         AboutMeComponent,
         ExperienceComponent,
         FoldersComponent,
-        FoldersDetailComponent,
         SkillsComponent,
         ExperienceBarComponent,
         BuildingPageComponent,
