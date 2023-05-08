@@ -9,7 +9,6 @@ import { IconClass } from '../classes/icons/icons';
 
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { FoldersComponent } from './folders/folders.component';
 import { SkillsComponent } from './skills/skills.component';
 import { BuildingPageComponent } from './building-page/building-page.component';
 import { TerminalCardComponent } from './terminal-card/terminal-card.component';
@@ -20,7 +19,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         SidenavComponent,
         AboutMeComponent,
         ExperienceComponent,
-        FoldersComponent,
         SkillsComponent,
         BuildingPageComponent,
         TerminalCardComponent,
@@ -39,7 +37,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         SidenavComponent,
         AboutMeComponent,
         ExperienceComponent,
-        FoldersComponent,
         SkillsComponent,
         BuildingPageComponent,
         TerminalCardComponent,
