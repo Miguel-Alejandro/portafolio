@@ -3,11 +3,27 @@
 >
   <div class="header__options">
     <ul class="flex">
-      <li (click)="changeHomeSection('experience')" class="ml-5">
+      <li
+        [ngClass]="{ activeOption: menuState === 'experience' }"
+        (click)="changeHomeSection('experience')"
+        class="ml-5"
+      >
         Experiencia
       </li>
-      <li (click)="changeHomeSection('skills')" class="ml-5">Skills</li>
-      <li (click)="changeHomeSection('projects')" class="ml-5">Proyectos</li>
+      <li
+        [ngClass]="{ activeOption: menuState === 'skills' }"
+        (click)="changeHomeSection('skills')"
+        class="ml-5"
+      >
+        Skills
+      </li>
+      <li
+        [ngClass]="{ activeOption: menuState === 'projects' }"
+        (click)="changeHomeSection('projects')"
+        class="ml-5"
+      >
+        Proyectos
+      </li>
     </ul>
   </div>
 
@@ -34,7 +50,7 @@
     </div>
   </div>
 
-  <div class="home__info__terminal-info md:py-10 lg:px-0 lg:w-5/12">
+  <div class="home__info__terminal-info pb-10 md:py-10 lg:px-0 lg:w-5/12">
     <app-terminal-card></app-terminal-card>
   </div>
 </div>
