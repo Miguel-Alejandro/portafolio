@@ -1,32 +1,18 @@
-<div class="skills pl-6 pr-6 pb-12 pt-4 lg:pl-16 lg:pr-16">
-    <h1 class="text-4xl text-white mb-10">Conocimientos</h1>
+<div class="skills">
+    <h1 class="text-white text-5xl mt-12 text-center mb-20">Skills</h1>
 
-    <div class="skills__container md:flex md:justify-between">
-
-        <div class="skill__container__folder overflow-auto md:w-2/4">
-            <app-folders [data]="skills" (folderDataSelected)="getSkillInfo($event)"></app-folders>
-        </div>
-
-        <div class=".skill__container__folder-info mt-12 pb-8 md:w-2/4 md:pl-16 md:mt-0">
-
-            <div class="skill__container__folder-info__message-not-found">
-                <p *ngIf="!skillInfo" class="text-slate-400 md:hidden">
-                    Selecciona una carpeta de arriba
-                    para poder ver más información
-                </p>
-                
-                <p *ngIf="!skillInfo" class="text-slate-400 hidden md:block md:mt-12">
-                    Selecciona una carpeta del lado izquierdo
-                    para poder ver más información
-                </p>
-
-                <div class="md:mt-12">
-                    <app-skill-card  *ngIf="skillInfo" [skill]="skillInfo"></app-skill-card>
+    <div class="skills__content flex flex-col items-center">
+        <div class="card">
+            <div class="header">Mis habilidades</div>
+            <div class="body">
+              <div class="skill" *ngFor="let skill of skills">
+                <div class="skill-name"> {{skill.name}} </div>
+                <div class="skill-level">
+                  <div class="skill-percent" [style]="'width:' + skill.experience + '%'"></div>
                 </div>
-
+                <div class="skill-percent-number">{{skill.experience}}%</div>
+              </div>
             </div>
-
-        </div>
-
-    </div>
+          </div> 
+    </div>     
 </div>
