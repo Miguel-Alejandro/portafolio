@@ -12,7 +12,6 @@ import { ExperienceComponent } from './experience/experience.component';
 import { FoldersComponent } from './folders/folders.component';
 import { FoldersDetailComponent } from './folders-detail/folders-detail.component';
 import { SkillsComponent } from './skills/skills.component';
-import { SkillCardComponent } from './skill-card/skill-card.component';
 import { ExperienceBarComponent } from './experience-bar/experience-bar.component';
 import { BuildingPageComponent } from './building-page/building-page.component';
 import { TerminalCardComponent } from './terminal-card/terminal-card.component';
@@ -26,7 +25,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         FoldersComponent,
         FoldersDetailComponent,
         SkillsComponent,
-        SkillCardComponent,
         ExperienceBarComponent,
         BuildingPageComponent,
         TerminalCardComponent,
@@ -48,7 +46,6 @@ import { SocialButtonComponent } from './social-button/social-button.component';
         FoldersComponent,
         FoldersDetailComponent,
         SkillsComponent,
-        SkillCardComponent,
         ExperienceBarComponent,
         BuildingPageComponent,
         TerminalCardComponent,
