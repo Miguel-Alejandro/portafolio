@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FoldersComponent } from './folders.component';
+import { SocialButtonComponent } from './social-button.component';
 
-describe('FoldersComponent', () => {
-  let component: FoldersComponent;
-  let fixture: ComponentFixture<FoldersComponent>;
+describe('SocialButtonComponent', () => {
+  let component: SocialButtonComponent;
+  let fixture: ComponentFixture<SocialButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FoldersComponent ]
+      declarations: [ SocialButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FoldersComponent);
+    fixture = TestBed.createComponent(SocialButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

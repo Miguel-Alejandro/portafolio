@@ -1,58 +1,61 @@
-<div class="home flex md:justify-between md:items-center">
-  <div class="home__info items-center md:mt-20 lg:flex">
-    <div class="home__info_menu-icon pl-6 mt-4 mb-8 md:hidden">
+<header
+  class="header hidden justify-between items-center px-12 py-4 h-16 md:flex"
+>
+  <div class="header__options">
+    <ul class="flex">
+      <li
+        [ngClass]="{ activeOption: menuState === 'experience' }"
+        (click)="changeHomeSection('experience')"
+        class="ml-5"
+      >
+        Experiencia
+      </li>
+      <li
+        [ngClass]="{ activeOption: menuState === 'skills' }"
+        (click)="changeHomeSection('skills')"
+        class="ml-5"
+      >
+        Skills
+      </li>
+      <li
+        [ngClass]="{ activeOption: menuState === 'projects' }"
+        (click)="changeHomeSection('projects')"
+        class="ml-5"
+      >
+        Proyectos
+      </li>
+    </ul>
+  </div>
+
+  <div class="header__social">
+    <app-social-button></app-social-button>
+  </div>
+</header>
+
+<div
+  class="home px-6 md:pt-16 md:px-12 lg:flex lg:justify-between lg:items-center lg:px-12"
+>
+  <div class="home__info items-center lg:mt-20 lg:flex">
+    <div class="home__info_menu-icon pl-6 mb-8 pt-4 md:hidden">
       <app-sidenav (sidenavOptionsState)="sidenavState($event)"></app-sidenav>
     </div>
 
-    <div class="home__info__picture lg:pl-16">
-      <img
-        class="hidden mb-12 xl:w-52 lg:w-52 md:w-40 lg:block"
-        src="/assets/img/miguel-alejandro.jpeg"
-        alt="miguel alejandro"
-      />
-    </div>
-
-    <div class="home__info__name pl-6">
-      <h1 class="text-white text-5xl md:text-6xl">
+    <div class="home__info__name container md:py-10">
+      <h1
+        class="text-7xl text-white text-pop-up-top mt-20 md:text-8xl md:mt-16 lg:mt-0"
+      >
         Miguel <br />
         Alejandro
       </h1>
-      <p class="text-slate-400 mt-8 mb-8">Front-end developer</p>
     </div>
   </div>
 
-  <div class="home_menu hidden md:block md:pr-16">
-    <p
-      class="mb-2 text-white cursor-pointer hover:text-cyan-500"
-      (click)="changeHomeSection('about')"
-    >
-      Sobre mi
-    </p>
-    <p
-      class="mb-2 text-white cursor-pointer hover:text-cyan-500"
-      (click)="changeHomeSection('experience')"
-    >
-      Experiencia
-    </p>
-    <p
-      class="mb-2 text-white cursor-pointer hover:text-cyan-500"
-      (click)="changeHomeSection('skills')"
-    >
-      Conocimientos
-    </p>
-    <p
-      class="mb-2 text-white cursor-pointer hover:text-cyan-500"
-      (click)="changeHomeSection('projects')"
-    >
-      Proyectos
-    </p>
+  <div class="home__info__terminal-info pb-10 md:py-10 lg:px-0 lg:w-5/12">
+    <app-terminal-card></app-terminal-card>
   </div>
 </div>
 
-<div class="my-info" [ngSwitch]="menuState">
-  <div class="my-info__about-me" *ngSwitchCase="'about'">
-    <app-about-me></app-about-me>
-  </div>
+<div class="h-screen my-info overflow-auto pt-1 pb-16" [ngSwitch]="menuState">
   <div class="my-info__about-me" *ngSwitchCase="'experience'">
     <app-experience></app-experience>
   </div>
@@ -60,6 +63,6 @@
     <app-skills></app-skills>
   </div>
   <div class="my-info__about-me" *ngSwitchCase="'projects'">
-    <app-building-page></app-building-page>
+    <app-projects></app-projects>
   </div>
 </div>
