@@ -1,8 +1,7 @@
-
 branches:
-  - main
+
+  - name: main
+    prerelease: false
   
   - name: development
     prerelease: dev
-
-tagFormat: v${version}
