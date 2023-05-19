@@ -42,6 +42,11 @@ export class ProjectsComponent {
       image: '/assets/img/dictionary-web-app.png',
       url: 'https://dictionary-web-app-55fbc.web.app/home',
     },
+    {
+      name: 'Youtube widget ui - library',
+      image: '/assets/img/youtube-widget-ui.png',
+      url: 'https://www.npmjs.com/package/youtube-widget-ui',
+    },
   ];
 
   customOptions: OwlOptions = {
