@@ -1,34 +1,19 @@
 <header
-  class="header hidden justify-between items-center px-12 py-4 h-16 md:flex"
+  class="header hidden justify-between items-center px-12 py-4 h-28 md:flex"
 >
-  <div class="header__options">
-    <ul class="flex">
-      <li
-        [ngClass]="{ activeOption: menuState === 'experience' }"
-        (click)="changeHomeSection('experience')"
-        class="ml-5"
-      >
-        Experiencia
-      </li>
-      <li
-        [ngClass]="{ activeOption: menuState === 'skills' }"
-        (click)="changeHomeSection('skills')"
-        class="ml-5"
-      >
-        Skills
-      </li>
-      <li
-        [ngClass]="{ activeOption: menuState === 'projects' }"
-        (click)="changeHomeSection('projects')"
-        class="ml-5"
-      >
-        Proyectos
-      </li>
-    </ul>
-  </div>
+  <div class="header__options flex w-full justify-between items-center">
+    <div class="first-options">
+      <p class="mb-2">//01. Home</p>
+      <p class="mb-2">//02. Portfolio</p>
+    </div>
 
-  <div class="header__social">
-    <app-social-button></app-social-button>
+    <div class="personal-brand">
+      <h1 class="text-4xl text-white">MA</h1>
+    </div>
+
+    <div class="second-options">
+      <p>//03. Contacto</p>
+    </div>
   </div>
 </header>
 
