@@ -14,6 +14,7 @@ import { BuildingPageComponent } from './building-page/building-page.component';
 import { TerminalCardComponent } from './terminal-card/terminal-card.component';
 import { SocialButtonComponent } from './social-button/social-button.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { ProjectsComponent } from './projects/projects.component';
         TerminalCardComponent,
         SocialButtonComponent,
         ProjectsComponent,
+        HomeComponent
     ],
     imports: [ 
         CommonModule,
@@ -44,6 +46,7 @@ import { ProjectsComponent } from './projects/projects.component';
         TerminalCardComponent,
         SocialButtonComponent,
         ProjectsComponent,
+        HomeComponent
     ],
     providers: [IconClass]
 })
