@@ -1,0 +1,103 @@
+.this-is{
+    color: var(--green-secondary);
+    font-size: 19px;
+    @apply mt-16;
+    @apply mb-8;
+}
+
+.personal-info{
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+    
+    .personal-info__text{
+        h1{
+            @apply text-6xl;
+            @apply text-white;
+
+            @apply md:text-7xl;
+        }
+        p{
+            font-size: 19px;
+            color: var(--green-secondary);
+            @apply mt-8;
+        }
+
+        .download-cv{
+            color: white;
+            font-size: 15px;
+            border: 1px solid white;
+            width: 115px;
+            text-align: center;
+            padding: 5px;
+            margin-top: 1rem;
+            cursor: pointer;
+
+            @apply md:hidden;
+        }
+    }
+}
+
+
+.personal-info__animated{
+    margin-right: 7rem;
+    margin-top: -4rem;
+}
+
+.orbit-container {
+    position: relative;
+  }
+
+  .center-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #17c84a2b;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+
+    p{
+        height: 100%;
+        text-align: center;
+        color: #17c84a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+  .orbit-circle, .orbit-circle-invert {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: orbit-circle-animation 3s linear infinite;
+  }
+
+  .orbit-circle-invert{
+    background-color: white;
+    animation: orbit-circle-animation-invert 3s linear infinite;
+  }
+
+  @keyframes orbit-circle-animation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit-circle-animation-invert {
+    0% {
+      transform: translate(50%, 50%) rotate(0deg) translateX(160px) rotate(0deg);
+    }
+    100% {
+      transform: translate(50%, 50%) rotate(-360deg) translateX(160px) rotate(-360deg);
+    }
+  }
