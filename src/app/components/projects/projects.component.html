@@ -3,32 +3,38 @@
     <h1 class="text-white text-5xl mt-12 text-center mb-20">Proyectos</h1>
   </div>
 
-  <div *ngIf="projects.length > 1" class="projects__carousel">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide [width]="carouselWidthCard" *ngFor="let project of projects">
+  <div class="wave-container">
+    <div class="wave"></div>
+  </div>
 
-        <div class="flex flex-col justify-center items-center">
-          <a class="project__carousel__card w-11/12 cursor-pointer" [href]="project.url" target="_blank">
-            <img [src]="project.image" alt="miguel alejandro proyectos" />
-            <p class="project__carousel__card__name mt-4 text-xl">
-              {{ project.name }}
-            </p>
-        </a>
-        </div>
-        
-      </ng-template>
+  <div class="projects__carousel">
+    <owl-carousel-o [options]="customOptions">
+      @for (project of projects; track $index) {
+          <ng-template carouselSlide [width]="carouselWidthCard">
+
+            <div class="project">
+              <a [href]="project.url" class="no-underline" target="_blank">
+                <img class="project__img" [src]="project.image" alt="miguel alejandro proyectos" />
+              </a>
+              <div class="project__description">
+                <h3>{{project.name}}</h3>
+                <p> {{project.description}} </p>
+                <br>
+                @for ( tech of project.technologies; track $index) {
+                  <span 
+                  [ngClass]="{
+                    'chip--yellow': tech === 'Firebase Hosting',
+                    'chip--red': tech === 'Angular',
+                    'chip--purple': tech === 'Stencil.js'
+                    }">
+                    {{tech}}
+                  </span>
+                }
+              </div>
+            </div>
+
+          </ng-template>
+      }
     </owl-carousel-o>
   </div>
-
-  <div *ngIf="projects.length === 1" class="projects__project">
-    <div class="flex flex-col justify-center items-center" *ngFor="let project of projects">
-      <a class="project__carousel__card w-2/3 cursor-pointer" [href]="project.url" target="_blank">
-        <img [src]="project.image" alt="miguel alejandro proyectos" />
-        <p class="project__carousel__card__name mt-4 text-xl">
-          {{ project.name }}
-        </p>
-    </a>
-    </div>
-  </div>
-
 </div>

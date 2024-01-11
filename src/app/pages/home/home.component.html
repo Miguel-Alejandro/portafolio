@@ -31,14 +31,14 @@
   </div>
 </div>
 
-<div class="h-screen my-info overflow-auto pt-1 pb-16" [ngSwitch]="menuState">
-  <div class="my-info__about-me" *ngSwitchCase="'experience'">
+<div class="h-screen my-info overflow-auto pt-1 pb-16">
+  <div class="my-info__about-me">
+    <app-projects></app-projects>
+  </div>
+  <div class="my-info__about-me">
     <app-experience></app-experience>
   </div>
-  <div class="my-info__about-me" *ngSwitchCase="'skills'">
+  <div class="my-info__about-me">
     <app-skills></app-skills>
-  </div>
-  <div class="my-info__about-me" *ngSwitchCase="'projects'">
-    <app-projects></app-projects>
   </div>
 </div>
