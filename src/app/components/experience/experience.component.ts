@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
 import { IconClass } from 'src/app/classes/icons/icons';
 import { JobExperience } from 'src/app/interfaces/job.interface';
 
@@ -21,6 +20,7 @@ export class ExperienceComponent {
           functionName: 'Crear diseño para las aplicaciones web',
         },
       ],
+      technologies: [ 'Python', 'Django', 'Django Rest' ]
     },
     {
       name: 'Jaak',
@@ -36,33 +36,25 @@ export class ExperienceComponent {
           functionName: 'Crear pruebas E2E',
         },
       ],
+      technologies: [ 'Angular', 'Ionic', 'Cypress', 'Firebase Auth' ]
+    },
+    {
+      name: 'IDS',
+      duration: '2023 - ACTUAL',
+      functions: [
+        {
+          functionName: 'Implementación de nuevos modulos',
+        },
+        {
+          functionName: 'Implementar nuevos features al sistema del cliente',
+        },
+        {
+          functionName: 'Corrección de bugs',
+        },
+      ],
+      technologies: [ 'vue' ]
     },
   ];
-
-  public customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: false,
-    dots: true,
-    navSpeed: 700,
-    navText: [ 'prev' , 'next'],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1,
-      },
-      740: {
-        items: 2,
-      },
-      940: {
-        items: 4,
-      },
-    },
-    nav: false,
-  };
 
   constructor(public iconClass:IconClass){}
 
