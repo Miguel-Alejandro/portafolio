@@ -5,7 +5,13 @@
     <div class="experience__container">
       <div class="job">
         <h2>{{ job.name }}</h2>
-        <p> {{ job.duration }} </p>
+        <p class="mb-5"> {{ job.duration }} </p>
+
+        @for (jobFunction of job.functions; track $index) {
+          <div class="job__actions">
+            <p>  -  {{ jobFunction.functionName }}</p>
+          </div>
+        }
       </div>
       <div class="icon">
         <fa-icon [icon]="iconClass.chevronRight"></fa-icon>
