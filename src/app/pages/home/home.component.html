@@ -3,8 +3,8 @@
 >
   <div class="header__options flex w-full justify-between items-center">
     <div class="first-options">
-      <p class="mb-2">//01. Home</p>
-      <p class="mb-2">//02. Proyectos</p>
+      <p (click)="scrollAction(homeInfo)" class="mb-2">//01. Home</p>
+      <p (click)="scrollAction(projects)" class="mb-2">//02. Proyectos</p>
     </div>
 
     <div class="personal-brand">
@@ -25,17 +25,17 @@
       <app-sidenav (sidenavOptionsState)="sidenavState($event)"></app-sidenav>
     </div>
 
-    <div class="home__info__name container md:py-10">
+    <div #homeInfo class="home__info__name container md:py-10">
       <app-home-info></app-home-info>
     </div>
   </div>
 </div>
 
 <div class="my-info pt-1 pb-16">
-  <div class="my-info__my-projects">
+  <div #projects class="my-info__my-projects">
     <app-projects></app-projects>
   </div>
-  <div class="my-info__employments-history">
+  <div #experience class="my-info__employments-history">
     <app-experience></app-experience>
   </div>
 </div>

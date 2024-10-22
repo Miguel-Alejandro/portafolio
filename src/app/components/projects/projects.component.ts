@@ -16,6 +16,13 @@ export class ProjectsComponent {
 
   public projects = [
     {
+      name: 'Password generator',
+      image: '/assets/img/password-generator.png',
+      url: 'https://password-generator-development.up.railway.app/home',
+      technologies: [ 'Angular' ],
+      description: 'Pagina para generar contraseñas'
+    },
+    {
       name: 'Dictionary web app',
       image: '/assets/img/dictionary-web-app.png',
       url: 'https://dictionary-web-app-55fbc.web.app/home',
@@ -27,7 +34,7 @@ export class ProjectsComponent {
       image: '/assets/img/youtube-widget-ui.png',
       url: 'https://www.npmjs.com/package/youtube-widget-ui',
       technologies: [ 'Stencil.js' ],
-      description: 'Librería para mostrar, buscar videos y mostrar la información de tu canal de youtube.'
+      description: 'Librería para mostrar, buscar videos y mostrar la información de un canal de youtube.'
     },
   ];
 
