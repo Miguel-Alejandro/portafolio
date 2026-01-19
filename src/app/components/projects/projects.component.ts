@@ -12,40 +12,29 @@ export class ProjectsComponent {
   public carouselWidthCard: number = 900;
 
   constructor(){
-    this.windowWidth = window.innerWidth;
-  }
-
-  @HostListener('window:resize')
-  getWindowSize() {
-    this.windowWidth = window.innerWidth;
-
-    if(this.windowWidth > 1200){
-      this.carouselWidthCard = 900; 
-    }
-    if(this.windowWidth <= 1200){
-      this.carouselWidthCard = 700;
-    }
-    if(this.windowWidth <= 992){
-      this.carouselWidthCard = 600;
-    }
-    if(this.windowWidth <= 768){
-      this.carouselWidthCard = 500;
-    }
-    if(this.windowWidth <= 576){
-      this.carouselWidthCard = 320;
-    }
   }
 
   public projects = [
     {
+      name: 'Password generator',
+      image: '/assets/img/password-generator.png',
+      url: 'https://password-generator-development.up.railway.app/home',
+      technologies: [ 'Angular' ],
+      description: 'Pagina para generar contraseñas'
+    },
+    {
       name: 'Dictionary web app',
       image: '/assets/img/dictionary-web-app.png',
       url: 'https://dictionary-web-app-55fbc.web.app/home',
+      technologies: ['Angular', 'Firebase Hosting'],
+      description: 'Aplicación diccionario, busca cualquier palabra en ingles, ve su significado y escucha su pronunciación. Todo esto gracias a una api.'
     },
     {
       name: 'Youtube widget ui - library',
       image: '/assets/img/youtube-widget-ui.png',
       url: 'https://www.npmjs.com/package/youtube-widget-ui',
+      technologies: [ 'Stencil.js' ],
+      description: 'Librería para mostrar, buscar videos y mostrar la información de un canal de youtube.'
     },
   ];
 
@@ -53,9 +42,8 @@ export class ProjectsComponent {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    pullDrag: true,
-    autoWidth: true,
-    autoHeight: true,
+    pullDrag: false,
+    dots: true,
     navSpeed: 700,
     responsive: {
       0: {
@@ -71,6 +59,7 @@ export class ProjectsComponent {
         items: 1
       }
     },
+    nav: false
   }
 
 }

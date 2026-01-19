@@ -1,68 +1,41 @@
 <header
-  class="header hidden justify-between items-center px-12 py-4 h-16 md:flex"
+  class="header hidden justify-between items-center px-12 py-4 h-28 md:flex"
 >
-  <div class="header__options">
-    <ul class="flex">
-      <li
-        [ngClass]="{ activeOption: menuState === 'experience' }"
-        (click)="changeHomeSection('experience')"
-        class="ml-5"
-      >
-        Experiencia
-      </li>
-      <li
-        [ngClass]="{ activeOption: menuState === 'skills' }"
-        (click)="changeHomeSection('skills')"
-        class="ml-5"
-      >
-        Skills
-      </li>
-      <li
-        [ngClass]="{ activeOption: menuState === 'projects' }"
-        (click)="changeHomeSection('projects')"
-        class="ml-5"
-      >
-        Proyectos
-      </li>
-    </ul>
-  </div>
+  <div class="header__options flex w-full justify-between items-center">
+    <div class="first-options">
+      <p (click)="scrollAction(homeInfo)" class="mb-2">//01. Home</p>
+      <p (click)="scrollAction(projects)" class="mb-2">//02. Proyectos</p>
+    </div>
 
-  <div class="header__social">
-    <app-social-button></app-social-button>
+    <div class="personal-brand">
+      <h1 class="text-4xl text-white">MA</h1>
+    </div>
+
+    <div class="second-options">
+      <app-social-button></app-social-button>
+    </div>
   </div>
 </header>
 
 <div
-  class="home px-6 md:pt-16 md:px-12 lg:flex lg:justify-between lg:items-center lg:px-12"
+  class="home px-6 md:pt-16 md:px-12 lg:px-12"
 >
   <div class="home__info items-center lg:mt-20 lg:flex">
     <div class="home__info_menu-icon pl-6 mb-8 pt-4 md:hidden">
       <app-sidenav (sidenavOptionsState)="sidenavState($event)"></app-sidenav>
     </div>
 
-    <div class="home__info__name container md:py-10">
-      <h1
-        class="text-7xl text-white text-pop-up-top mt-20 md:text-8xl md:mt-16 lg:mt-0"
-      >
-        Miguel <br />
-        Arellano
-      </h1>
+    <div #homeInfo class="home__info__name container md:py-10">
+      <app-home-info></app-home-info>
     </div>
-  </div>
-
-  <div class="home__info__terminal-info pb-10 md:py-10 lg:px-0 lg:w-5/12">
-    <app-terminal-card></app-terminal-card>
   </div>
 </div>
 
-<div class="h-screen my-info overflow-auto pt-1 pb-16" [ngSwitch]="menuState">
-  <div class="my-info__about-me" *ngSwitchCase="'experience'">
-    <app-experience></app-experience>
-  </div>
-  <div class="my-info__about-me" *ngSwitchCase="'skills'">
-    <app-skills></app-skills>
-  </div>
-  <div class="my-info__about-me" *ngSwitchCase="'projects'">
+<div class="my-info pt-1 pb-16">
+  <div #projects class="my-info__my-projects">
     <app-projects></app-projects>
+  </div>
+  <div #experience class="my-info__employments-history">
+    <app-experience></app-experience>
   </div>
 </div>

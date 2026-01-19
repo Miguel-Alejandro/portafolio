@@ -1,21 +1,26 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Scroll } from '../../utils/scroll';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public menuState: 'about' | 'experience' | 'skills' | 'projects' = 'experience';
+
+  @ViewChild('homeInfo') homeInfo: ElementRef;
+  @ViewChild('projects') projects: ElementRef;
+  @ViewChild('experience') experience: ElementRef;
   
   constructor(){}
   
   public sidenavState($event): void {
-    this.menuState = $event;
+    if($event === 'home') this.scrollAction(this.homeInfo.nativeElement);
+    if($event === 'projects') this.scrollAction(this.projects.nativeElement);
   }
 
-  public changeHomeSection(optionType: 'about' | 'experience' | 'skills' | 'projects'): void {
-    this.menuState = optionType;
+
+  public scrollAction(element:HTMLElement): void {
+    Scroll.scrollToSection(element);
   }
   
 }

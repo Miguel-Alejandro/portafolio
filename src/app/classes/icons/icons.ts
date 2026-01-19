@@ -1,4 +1,4 @@
-import { faBars, faXmark, faEnvelope, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faEnvelope, faArrowLeft, faArrowRight, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faLinkedin,
@@ -24,6 +24,7 @@ export class IconClass {
   public goIcon = faGolang;
   public arrowLeftIcon = faArrowLeft;
   public arrowRightIcon = faArrowRight;
+  public chevronRight = faChevronRight;
 
   public githubIcon = faGithub;
   public linkedinIcon = faLinkedin;

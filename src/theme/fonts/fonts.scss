@@ -1,21 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Roboto+Condensed&family=Roboto:wght@300&display=swap");
+@font-face {
+    font-family: 'Orbitron';
+    src: url('./../../fonts/Orbitron/Orbitron-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('./../../fonts/Orbitron/Orbitron-Medium.ttf');
+    font-weight: 500;
+    font-style: medium;
+}
+
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('./../../fonts/Barlow/Barlow-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('./../../fonts/Barlow/Barlow-Light.ttf');
+    font-weight: 300;
+    font-style: light;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('./../../fonts/Barlow/Barlow-Medium.ttf');
+    font-weight: 500;
+    font-style: medium;
+}
 
 h1,
 h2,
-h3,
+h3{
+font-family: 'Orbitron', sans-serif;
+}
+
+
 h4,
 h5,
 h6,
 p,
-input,
-label,
-textarea,
-select,
-option,
+a,
 span,
-b,
-a {
-  font-family: "Chivo Mono", monospace;
-  font-family: "Roboto", sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
+ul,
+li,
+input,
+button,
+section,
+article{
+  font-family: 'Barlow', sans-serif !important;
 }
