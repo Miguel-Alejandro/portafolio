@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   public downloadPDF(): void{
-    const url = "assets/files/Miguel_Alejandro_Arellano_Lucio_-_Frontend_Developer.pdf";
+    const url = "assets/files/Miguel_Alejandro_Arellano_Lucio_-_Frontend_Developer-2026.pdf";
     window.open(url);
   }
 

@@ -51,6 +51,15 @@ export class ExperienceComponent {
         {
           functionName: 'Corrección de bugs',
         },
+        {
+          functionName: 'Desarrollo de API REST con Spring Boot',
+        },
+        {
+          functionName: 'Apoyo en base de datos sql',
+        },
+        {
+          functionName: 'Apoyo en crear procedimientos PL/SQL',
+        },
       ],
       technologies: [ 'vue' ]
     },
