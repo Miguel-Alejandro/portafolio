@@ -16,6 +16,13 @@ export class ProjectsComponent {
 
   public projects = [
     {
+      name: 'MasterBowl',
+      image: '/assets/img/masterbowl.png',
+      url: 'https://masterbowl.app/home',
+      technologies: [ 'Angular', 'Railway', 'Ionic' ],
+      description: 'MasterBowl no es solo otra plataforma de Fantasy Football. Es una revolución que transforma a tus jugadores favoritos de la NFL en tarjetas coleccionables dinámicas, cuyo valor y poder crecen con cada jugada espectacular en el campo.'
+    },
+    {
       name: 'Password generator',
       image: '/assets/img/password-generator.png',
       url: 'https://password-generator-development.up.railway.app/home',
